@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Connect</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION BAR -->
+
+    <header>
+        <div class="logo">Campus Connect</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#campus">Campus Map</a>
+            <a href="#resources">Resources</a>
+            <a href="#opportunities">Opportunities</a>
+            <a href="#notices">Notices</a>
+        </nav>
+    </header>
+
+
+    <!-- HOMEPAGE -->
+
+    <section class="hero" id="home">
+
+        <h1>Welcome to Campus Connect</h1>
+
+        <p>Your college, your opportunities,
+        everything in one place.</p>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Search campus, resources or events..."
+        >
+
+        <button onclick="searchWebsite()">Search</button>
+
+    </section>
+
+
+    <!-- MODULE 1: CAMPUS NAVIGATOR -->
+
+    <section class="module" id="campus">
+
+        <h2>Campus Navigator</h2>
+
+        <p>Find your way around the college campus.</p>
+
+        <input
+            type="text"
+            id="campusSearch"
+            placeholder="Search classrooms, library, labs..."
+        >
+
+        <div class="card-container" id="campusList"></div>
+
+    </section>
+    <section class="module" id="live-map">
+    <h2>🗺️ Explore BMSIT Campus</h2>
+    <p>Move around campus and watch your student avatar move on the map!</p>
+
+    <div class="map-controls">
+        <button onclick="startTracking()">Start Live Location</button>
+        <button onclick="stopTracking()">Stop</button>
+    </div>
+
+    <p id="locationStatus">Press Start Live Location to begin.</p>
+    <div id="campusMap"></div>
+</section>
+
+
+    <!-- MODULE 2: ACADEMIC RESOURCES -->
+
+    <section class="module" id="resources">
+
+        <h2>Academic Resource Hub</h2>
+
+        <p>Access study materials and learning resources.</p>
+
+        <select id="subjectFilter">
+            <option value="all">All Subjects</option>
+            <option value="Mathematics">Mathematics</option>
+            <option value="Physics">Physics</option>
+            <option value="Programming">Programming</option>
+            <option value="Electronics">Electronics</option>
+        </select>
+
+        <div class="card-container" id="resourceList"></div>
+
+    </section>
+
+
+    <!-- MODULE 3: EVENTS AND OPPORTUNITIES -->
+
+    <section class="module" id="opportunities">
+
+        <h2>Events & Opportunities</h2>
+
+        <p>Discover opportunities beyond the classroom.</p>
+
+        <div class="card-container" id="eventList"></div>
+
+    </section>
+
+
+    <!-- MODULE 4: NOTICE BOARD -->
+
+    <section class="module" id="notices">
+
+        <h2>College Notice Board</h2>
+
+        <p>Stay updated with the latest announcements.</p>
+
+        <div id="noticeList"></div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h3>Campus Connect</h3>
+
+        <p>Your College Digital Hub</p>
+
+        <p>Developed by First Year Engineering Students</p>
+
+    </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
